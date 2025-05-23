@@ -1,4 +1,4 @@
 package com.ps;
 
-public class Sandwich {
+public class Sandwich implements Product {
 }

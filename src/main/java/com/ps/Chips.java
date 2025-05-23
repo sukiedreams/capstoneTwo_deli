@@ -1,4 +1,4 @@
 package com.ps;
 
-public class Chips {
+public class Chips implements Product {
 }

@@ -1,4 +1,4 @@
 package com.ps;
 
-public class Drink {
+public class Drink implements Product {
 }

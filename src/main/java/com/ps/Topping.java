@@ -1,4 +1,5 @@
 package com.ps;
 
-public class Topping {
+public abstract class Topping {
+
 }

@@ -101,7 +101,7 @@ public class UserInterface {
         return new Drink(flavor, size);
     }
 
-    private void chooseChip() {
+    private Chips chooseChip() {
         System.out.println("---Chips---\n");
 
         System.out.println("Chip type: ");

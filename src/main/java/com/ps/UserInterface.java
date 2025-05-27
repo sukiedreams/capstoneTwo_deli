@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class UserInterface {
     private Scanner scanner = new Scanner(System.in);
 
-    public void run() {
+    public void homeScreen() {
         System.out.println("Welcome to DELI-cious!\n");
 
         int mainMenuSelect;
@@ -31,14 +31,78 @@ public class UserInterface {
         } while (mainMenuSelect != 0);
     }
 
+    //Order menu
     private void handleNewOrder() {
         Order order = new Order();
         System.out.println("---Order Menu---\n");
         int orderMenuSelect;
 
         do {
+            System.out.println("1. Add Sandwich");
+            System.out.println("2. Add Drink");
+            System.out.println("3. Add Chip");
+            System.out.println("4. Remove an item");
+            System.out.println("5. Checkout");
+            System.out.println("6. Cancel Order\n");
+            System.out.println("Select");
+            orderMenuSelect = scanner.nextInt();
 
-        } while ();
+            switch (orderMenuSelect) {
+                case 1:
+                    buildSandwich();
+                    break;
+                case 2:
+                    buildDrink();
+                    break;
+                case 3:
+                    chooseChip();
+                    break;
+                case 4:
+                    removeItem();
+                    break;
+                case 5:
+                    cartCheckout();
+                    break;
+                case 0:
+                    System.out.println("Your order has been Canceled...");
+                    break;
+                default:
+                    System.out.println("Invalid selection, please try again.");
+            }
+        } while (orderMenuSelect != 0);
+    }
+
+    private void buildSandwich() {
+        System.out.println("---Make Your Sandwich---\n");
+
+        System.out.println("Bread: White, Wheat, Rye, Wrap, Bagel, or Croissant.");
+        String bread = scanner.nextLine();
+
+        System.out.println("Size of Sandwich: 4, 8, 12.");
+        int size = Integer.parseInt(scanner.nextLine());
+
+        System.out.println("Would you like it Toasted? Yes/No: ");
+        boolean toasted = scanner.nextLine().equalsIgnoreCase("yes");
+
+        Sandwich sandwich = new Sandwich(size, bread, toasted);
+
+        while (true) {
+
+        }
+        sandwich.addTopping(topping);
+
+    }
+
+    private void buildDrink() {
+    }
+
+    private void chooseChip() {
+    }
+
+    private void removeItem() {
+    }
+
+    private void cartCheckout() {
     }
 
 }

@@ -42,8 +42,7 @@ public class UserInterface {
             System.out.println("2. Add Drink");
             System.out.println("3. Add Chip");
             System.out.println("4. Remove an item");
-            System.out.println("5. Checkout");
-            System.out.println("6. Cancel Order\n");
+            System.out.println("5. Checkout\n");
             System.out.println("Select");
             orderMenuSelect = scanner.nextInt();
 
@@ -62,9 +61,6 @@ public class UserInterface {
                     break;
                 case 5:
                     cartCheckout();
-                    break;
-                case 0:
-                    System.out.println("Your order has been Canceled...");
                     break;
                 default:
                     System.out.println("Invalid selection, please try again.");
@@ -94,15 +90,34 @@ public class UserInterface {
     }
 
     private void buildDrink() {
+        System.out.println("---Drinks---\n");
+
+        System.out.println("Drink Flavor: ");
+        String flavor = scanner.nextLine();
+
+        System.out.println("Size: small, medium, large.");
+        String size = scanner.nextLine();
+
+        return new Drink(flavor, size);
     }
 
     private void chooseChip() {
+        System.out.println("---Chips---\n");
+
+        System.out.println("Chip type: ");
+        String type = scanner.nextLine();
+
+        return new Chips(type);
     }
 
     private void removeItem() {
+        //TODO come back to this.
     }
 
     private void cartCheckout() {
+        // okay here will be for, if/else, try/catch.
+        // to cancel order.
+        //TODO come back to this.
     }
 
 }

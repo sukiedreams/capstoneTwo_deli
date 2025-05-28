@@ -15,11 +15,14 @@ public class Sandwich implements Product {
         this.toasted = toasted;
     }
 
+    public void addTopping(Topping topping) {
+        toppings.add(topping);
+    }
+
     @Override
     public String getName() {
         return size + "\"" + bread + "Sandwich";
     }
-//TODO come back to this.
     @Override
     public double getPrice() {
         double sizePrice = switch (size) {

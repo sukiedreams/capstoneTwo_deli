@@ -72,17 +72,19 @@ public class UserInterface {
 
         System.out.println("Bread: White, Wheat, Rye, Wrap, Bagel, or Croissant.");
         String bread = scanner.nextLine();
+        scanner.nextLine();
 
         System.out.println("Size of Sandwich: 4, 8, 12.");
         int size = Integer.parseInt(scanner.nextLine());
 
         System.out.println("Would you like it Toasted? Yes/No: ");
         boolean toasted = scanner.nextLine().equalsIgnoreCase("yes");
-
         Sandwich sandwich = new Sandwich(size, bread, toasted);
 
         while (true) {
             System.out.println("Add Toppings (type 'Done' when finished): ");
+            System.out.println("Cheese: american, provolone, cheddar, swiss");
+            System.out.println("Meats: steak, ham, salami, roast beef, chicken, bacon\n");
             System.out.println("Topping name: ");
             String name = scanner.nextLine();
             if (name.equalsIgnoreCase("done"))

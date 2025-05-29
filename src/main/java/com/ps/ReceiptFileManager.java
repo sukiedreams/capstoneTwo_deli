@@ -1,30 +1,19 @@
 package com.ps;
 
-import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class ReceiptFileManager {
-    private static final  String FILE_PATH = "receipt.csv";
 
     public static void saveOrderToFile(Order order) throws IOException {
-
-        FileWriter writer = new FileWriter(FILE_PATH, true); // true = append mode
-        BufferedWriter bufferedWriter = new BufferedWriter(writer);
-
-        String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss"));
-        double total = order.getTotal();
-
-        for (Product product : order.getItems()) {
-            bufferedWriter.write(String.format("%s,%s,$%.2f,$%.2f%n",
-                    timestamp,
-                    product.getName(),
-                    product.getPrice(),
-                    total));
+        String fileName = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss")) + ".txt";
+        FileWriter writer = new FileWriter("receipts/" + fileName);
+        for (Product p : order.getItems()) {
+            writer.write(p.getName() + " - $" + p.getPrice() + "\n");
         }
-
-        bufferedWriter.close();
+        writer.write("Total: $" + order.getTotal());
+        writer.close();
     }
 }

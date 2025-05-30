@@ -1,3 +1,6 @@
+![df4f827d43d44dae0627d38045bb1ac2.jpg](df4f827d43d44dae0627d38045bb1ac2.jpg)
+
+
 # Deli-cious
 A java command-line point-of-sale (POS) application for a custom sandwich shop-built using all 4 pillars of OOP (object-oriented programming). 
 
@@ -96,7 +99,7 @@ BBQ Chips, $1.50
 Total, $17.60
 
 ---
+## Suley Ayala
+For Capstone Project 2 Pluralsight Advanced java OOP Capstone.
 
-## How to Run
-
-1. Clone
+![0fe2d432b56ca2af4b2ee87e687e61da.jpg](0fe2d432b56ca2af4b2ee87e687e61da.jpg)

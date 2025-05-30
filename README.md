@@ -67,3 +67,36 @@ Abstract base class
 |------RegularTop
 
 |______PremiumTop
+
+---
+
+## Pricing Summary
+
+| Items             | 4"   | 8"  | 12"   |
+|-------------------|------|-----|-------|
+| Sandwich Base     | $5.50 | $7.00 | $8.50 |
+| Meats (per items) | $1.00 | $2.00 | $3.00 |
+| Extra Meat | $0.50 | $1.00 | $1.50 |
+| Cheese (per item) | $0.75 | $1.50 | $2.25 |
+| Extra Cheese | $0.30 | $0.60 | $0.90 |
+| Chips | - | $1.50 | - |
+| Drink | $2.00 (s) | $2.50 (m) | $3.00 (l) |
+
+----
+
+====New Order (202505030 09:43:00)====
+8" white sandwich | Toasted: yes | Meats: chicken | Extras: bacon | Cheeses: cheddar |
+
+Extras: | Toppings: Lettuce, Tomato | Sauces: ranch, $13.60
+
+Medium Drink, $2.50
+
+BBQ Chips, $1.50
+
+Total, $17.60
+
+---
+
+## How to Run
+
+1. Clone

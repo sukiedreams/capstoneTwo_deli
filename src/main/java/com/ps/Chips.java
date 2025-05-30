@@ -1,19 +1,18 @@
 package com.ps;
 
 public class Chips implements Product {
-    private String type;
+    private String flavor;
 
-    public Chips(String type) {
-        this.type = type;
+    public Chips(String flavor) {
+        this.flavor = flavor;
     }
-
     @Override
-    public String getName() {
-        return type + "Chips";
-    }
-
-    @Override
-    public double getPrice() {
+    public double calPrice() {
         return 1.50;
+    }
+
+    @Override
+    public String getDetails() {
+        return flavor + "Chips";
     }
 }

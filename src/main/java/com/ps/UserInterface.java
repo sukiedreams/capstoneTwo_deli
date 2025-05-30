@@ -10,20 +10,56 @@ public class UserInterface {
         boolean running = true;
 
         while (running) {
+            System.out.println(" " +
+                    "   @@@@@@@@@@@@     @@@@@@@@@@@@  @@@@@@       @@@@@     @@@@@@@    @       @@@@@@       @          @     @@@@@@ \n" +
+                    "   @@@@@@@@@@@@@@   @@@@@@@@@@@@  @@@@@@       @@@@@   @@          @@    @@        @     @          @   @@       \n" +
+                    "   @@@@@    @@@@@@  @@@@@         @@@@@        @@@@@  @@           @@   @@          @   @@          @   @@       \n" +
+                    "   @@@@@     @@@@@  @@@@@@@@@@@   @@@@@        @@@@@  @            @@   @           @   @@          @     @@     \n" +
+                    "   @@@@@     @@@@@  @@@@@@@@@@@   @@@@@        @@@@@ @@            @@   @           @   @@         @@       @@   \n" +
+                    "   @@@@@    @@@@@@  @@@@@         @@@@@        @@@@@  @            @@   @           @   @@         @@         @@ \n" +
+                    "   @@@@@@@@@@@@@@   @@@@@@@@@@@@  @@@@@@@@@@@@ @@@@@  @@           @@    @         @    @@        @@@         @@ \n" +
+                    "   @@@@@@@@@@@@    @@@@@@@@@@@@@  @@@@@@@@@@@@ @@@@@    @@@@@@@@   @@     @@@@@@@@@       @@@@@@@@ @@  @@@@@@@@  \n");
             System.out.println("Welcome to DELI-cious!\n");
             System.out.println("1. New Order");
+            System.out.println("2. Visit Bodega the Deli-Cat!");
             System.out.println("0. Exit\n");
             System.out.println("Select: ");
-          String mainMenuSelect = scanner.nextLine();
+            String mainMenuSelect = scanner.nextLine();
 
-          switch (mainMenuSelect) {
-              case "1" -> startNewOrder();
-              case "0" -> {
-                  System.out.println("Exiting...");
-                  running = false;
-              }
-              default -> System.out.println("Invalid, try again.");
-          }
+            switch (mainMenuSelect) {
+                case "1" -> startNewOrder();
+                case "2" -> visitBodega();
+                case "0" -> {
+                    System.out.println("Exiting...");
+                    running = false;
+                }
+                default -> System.out.println("Invalid, try again.");
+            }
+        }
+    }
+
+    private void visitBodega() {
+        System.out.println("You tiptoe behind the counter and find Bodega the Deli-Cat lounging on a loaf of rye bread.");
+        System.out.println("Would you like to pet Bodega? (yes/no)");
+        String input = scanner.nextLine();
+
+        if (input.equalsIgnoreCase("yes")) {
+            System.out.println(" /\\ ___ /\\\n" +
+                    " ( n w n )    *purr purr*\n" +
+                    "  \\  ~  /  \n" +
+                    "  (     )      n\n" +
+                    " (       )----' '\n" +
+                    "  \\__|__/------'");
+            System.out.println("Bodega Purrs happily and rubs against your hand.\n" +
+                    "\n");
+        } else {
+            System.out.println(" /\\ ___ /\\\n" +
+                    " ( - ^ - )    *Snore*\n" +
+                    "  \\  ~  /  \n" +
+                    "  (     )    \n" +
+                    "(__=___=__)\n");
+            System.out.println("Bodega flicks her tail and returns to her nap on the bread.\n" +
+                    "\n");
         }
     }
 
@@ -64,7 +100,7 @@ public class UserInterface {
                 }
                 default -> System.out.println("Invalid, Try again");
             }
-            }
+        }
     }
 
     private Sandwich buildSandwich() {
